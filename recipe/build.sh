@@ -9,7 +9,7 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* ./lang/sql/sqlite/autoconf
 # docdir specified to avoid installation of 100MB of extracted docs
 cd build_unix
 ../dist/configure --prefix=$PREFIX \
-                  --docdir=${SRC_DIR}/do_not_install_the_docs/docs \
+                  --docdir="$(pwd)/do_not_install_the_docs/docs" \
                   --enable-shared \
                   --disable-static \
                   --enable-cxx \
