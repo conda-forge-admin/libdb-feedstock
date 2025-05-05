@@ -31,7 +31,8 @@ build:
 requirements:
   build:
     - make                  # [unix]
-    - gnuconfig  # [unix]
+    - gnuconfig             # [unix]
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
@@ -52,6 +53,7 @@ outputs:
     requirements:
       build:
         # compilers are to ensure that variants are captured
+        - {{ stdlib('c') }}
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
       run:
