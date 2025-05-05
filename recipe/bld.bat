@@ -1,12 +1,7 @@
 pushd build_windows
 
-IF "%vc%" == "9" (
-   devenv /Upgrade Berkeley_DB.sln
-   set SLN_FILE=Berkeley_DB.sln
-) else (
-   devenv /Upgrade Berkeley_DB_vs2010.sln
-   set SLN_FILE=Berkeley_DB_vs2010.sln
-)
+devenv /Upgrade Berkeley_DB_vs2010.sln
+set SLN_FILE=Berkeley_DB_vs2010.sln
 
 if %ARCH% == 32 (
     set ARCH_STRING=Win32
